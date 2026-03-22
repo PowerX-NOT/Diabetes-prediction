@@ -166,6 +166,8 @@ if do_predict:
 
     st.markdown("---")
     st.subheader("Input snapshot")
-    st.dataframe(pd.DataFrame([input_row]).T.rename(columns={0: "value"}))
+    # Convert all values to string to avoid Arrow serialization issues with mixed types
+    display_df = pd.DataFrame([input_row]).T.rename(columns={0: "value"}).astype(str)
+    st.dataframe(display_df)
 else:
     st.info("Enter inputs in the sidebar and click Predict.")
