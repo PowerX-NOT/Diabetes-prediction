@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Model artifacts / outputs
+*.pkl
+*.joblib
+*.json
+
+# Data
+*.csv
